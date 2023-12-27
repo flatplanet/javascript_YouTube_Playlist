@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Javascript Demo...</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <body>
+    <br/>
+    <div class="container">
+      <h1>Arrays</h1>
+      <p id="demo">Arrays are basically lists...</p>
+
+    <script>
+        // Arrays!
+        let toppings = ["Pepperoni", 'Cheese', "Mushrooms", 41];
+
+        document.write(toppings[0]+ "<br/><br/>");
+
+        // For loop
+        for (i in toppings){
+          document.write(toppings[i] + "<br/>");
+
+        }
+
+        // get the length of array
+        document.write("Number of items: " + toppings.length + "<br/>");
+
+        // Add Item To Array
+        toppings.push("Supreme");
+        document.write(toppings + "<br/>");
+        document.write("Number of items: " + toppings.length + "<br/>");
+
+        // Remove Item
+        delete toppings[3]
+        document.write(toppings + "<br/>");
+        document.write("Number of items: " + toppings.length + "<br/>");
+
+        // Remove forever with splice
+        toppings.splice(3, 1)
+        document.write(toppings + "<br/>");
+        document.write("Number of items: " + toppings.length + "<br/>");
+        //document.write(myNum1 == myNum2);
+
+
+    </script>
+
+
+    
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
