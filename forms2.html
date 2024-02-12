@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Javascript Demo...</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="myFunction.js"></script>
+  </head>
+  <body>
+    <br/>
+    <div class="container">
+      <h1>Advanced Web Forms!</h1>
+      <p id="demo">Fill Out The Form Below...</p>
+    
+
+
+    <script>
+    //Web Forms
+    function hello(){
+    let name = document.getElementById("name").value;
+    let color = document.getElementById("selected").value;
+    // Radio Button Nonsense
+    let button1 = document.getElementById('radio1');
+    let button2 = document.getElementById('radio2');
+    // Logic to see which radio is checked
+    if (button1.checked == true){
+      myButton = button1.value;
+    } else {
+      myButton = button2.value;
+    }
+
+
+    // Send Greeting
+    document .getElementById("demo").innerHTML = "Hello " + myButton + " " + name + "!" + "<br/> Your Favorite Color Is: " + color;
+    }
+    
+    // Clear the Form
+    function clearForm(){
+      // reset the demo text
+      document .getElementById("demo").innerHTML = "Fill Out The Form Below...";
+      // clear the form
+      document.getElementById("myForm").reset();
+    }
+        
+        
+        
+    </script>
+
+    <form id="myForm">
+    Name:<br/>
+    <input id="name" type="text" class="form-control"><br/><br/>
+
+    <select class="form-select" id="selected">
+      <option selected>Pick Your Favorite Color</option>
+      <option value="Red">Red</option>
+      <option value="Blue">Blue</option>
+      <option value="Green">Green</option>
+    </select><br/><br/>
+
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="bob" id="radio1" value="Male">
+      <label class="form-check-label" for="radio1">
+        Male
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="bob" id="radio2" value="Female" checked>
+      <label class="form-check-label" for="radio2">
+        Female
+      </label>
+    </div><br/><br/>
+
+
+    <button type="button" onclick="hello()" class="btn btn-secondary">Submit Form!</button>
+    <button type="button" onclick="clearForm()" class="btn btn-secondary">Reset</button>
+
+    </form>
+    
+
+
+
+
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
