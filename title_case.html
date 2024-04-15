@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Javascript Demo...</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <body>
+    <br/>
+    <div class="container">
+      <h1>TitleCase</h1>
+      <p id="demo">Let's Capitalize Things!</p>
+    
+
+
+    <script>
+        let name = "john elder 41";
+        //document.getElementById('demo').innerHTML = name;
+
+        // split our string into an array
+        let my_array = name.split(" ");
+        document.getElementById('demo').innerHTML = my_array;
+        // For loop
+        for (let x in my_array){
+            my_array[x] = my_array[x][0].toUpperCase() + 
+            my_array[x].slice(1, my_array[x].length);
+        };
+        // convert array back to string
+        let new_name = "";
+        for (let y in my_array){
+          new_name = new_name + my_array[y] + " "
+        };
+
+
+
+        document.getElementById('demo').innerHTML = new_name.trim();
+
+
+
+
+
+
+
+    </script>
+
+
+    
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
